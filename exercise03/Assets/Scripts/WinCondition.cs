@@ -9,11 +9,13 @@ public class WinCondition : MonoBehaviour
     public static float points = 0;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI loseText;
+    public TextMeshProUGUI winText;
 
     // Start is called before the first frame update
     void Start()
     {
         loseText.gameObject.SetActive(false);
+        winText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,6 +36,11 @@ public class WinCondition : MonoBehaviour
         if (EnemyController.hp <= 0)
         {
             loseText.gameObject.SetActive(true);
+        }
+
+        if (points >= 17 && timer > 0)
+        {
+            winText.gameObject.SetActive(true);
         }
     }
 }

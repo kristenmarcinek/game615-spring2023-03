@@ -42,10 +42,11 @@ GameObject:
   m_Component:
   - component: {fileID: 388000064345816650}
   - component: {fileID: 388000064345816651}
-  - component: {fileID: 388000064345816652}
   - component: {fileID: 388000064345816653}
+  - component: {fileID: 7683558355929482338}
   - component: {fileID: 388000064345816655}
   - component: {fileID: 388000064345816654}
+  - component: {fileID: 1749857634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -84,18 +85,6 @@ CapsuleCollider:
   m_Height: 7
   m_Direction: 2
   m_Center: {x: -1, y: 1.5, z: 0.5}
---- !u!114 &388000064345816652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388000064345816644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4054ff0c49fb3040891298abb2fac4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &388000064345816653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,6 +101,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &7683558355929482338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388000064345816644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ea68f9e210901469f48c8884f8d259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rotateSpeed: 75
 --- !u!114 &388000064345816655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe230ffc1c520642a18cdcde13c2c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 30
+  timer: 60
   timerText: {fileID: 0}
+  loseText: {fileID: 0}
+  winText: {fileID: 0}
 --- !u!114 &388000064345816654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +143,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b53618f837b9b0419fb2ae59f80b817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointText: {fileID: 0}
+--- !u!114 &1749857634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388000064345816644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ea68f9e210901469f48c8884f8d259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  rotateSpeed: 75
 --- !u!1 &388000064480884686
 GameObject:
   m_ObjectHideFlags: 0
